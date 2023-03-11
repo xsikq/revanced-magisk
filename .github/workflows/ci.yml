@@ -19,7 +19,6 @@ jobs:
         run: |
           source utils.sh
           toml_prep "$(cat config.toml)"
-
           is_youtube_latest() {
             t=$(toml_get_table YouTube)
             v=$(toml_get "$t" "version") || v=
@@ -36,18 +35,15 @@ jobs:
               return 1 # not experimental, dont build
             fi
           }
-
           is_patches_latest() {
             PATCHES_SRC=$(toml_get "$(toml_get_table "")" patches-source) || PATCHES_SRC="revanced/revanced-patches"
             last_patches_url=$(wget -nv --header="Authorization: token ${{ secrets.GITHUB_TOKEN }}" -O- https://api.github.com/repos/${PATCHES_SRC}/releases/latest | json_get 'browser_download_url' | grep 'jar')
             last_patches=${last_patches_url##*/}
             cur_patches=$(sed -n 's/.*Patches: \(.*\)/\1/p' build.md | xargs)
-
             echo "current patches version: $cur_patches"
             echo "latest patches version: $last_patches"
             [ "$cur_patches" != "$last_patches" ] # test success=>build, fail=>dont build
           }
-
           if ! git checkout update; then
             echo "first time building!"
             echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
@@ -58,7 +54,6 @@ jobs:
             echo "dont build!"
             echo "SHOULD_BUILD=0" >> $GITHUB_OUTPUT
           fi
-
     outputs:
       SHOULD_BUILD: ${{ steps.should_build.outputs.SHOULD_BUILD }}
 
