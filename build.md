@@ -1,31 +1,27 @@
 CLI: revanced-cli-4.1.0-all.jar  
-Integrations: revanced-integrations-0.125.1.apk  
-Patches: revanced-patches-2.202.1.jar  
+Integrations: revanced-integrations-0.126.2.apk  
+Patches: revanced-patches-2.203.2.jar  
 
 YouTube
 ==
-- feat(YouTube/Default video quality): check whether the default video quality is valid before applying it
-- feat(YouTube/Swipe controls): add `Swipe gestures in 'Lock screen' mode` settings
-- feat(YouTube/Swipe controls): `Enable press-to-swipe gesture` is no longer `Experimental Flags`
-- fix(YouTube/Hide voice search button): add right margin https://github.com/inotia00/ReVanced_Extended/issues/1768 https://github.com/inotia00/ReVanced_Extended/issues/1773
-- fix(YouTube/SponsorBlock): some videos refused to end where there's a skippable segment at the end https://github.com/inotia00/ReVanced_Extended/issues/1777
-- fix(YouTube/Swipe controls): change the description of settings
+- fix(YouTube/Custom branding icon YouTube): displays an appropriate error if the path to patch options is invalid
+- fix(YouTube/Custom branding icon YouTube): patch options not available https://github.com/inotia00/ReVanced_Extended/issues/1795
+- fix(YouTube/Spoof player parameters): clips video not working https://github.com/inotia00/revanced-integrations/pull/31
+- fix(YouTube/Spoof player parameters): thumbnail preview is not updated https://github.com/inotia00/ReVanced_Extended/issues/1796
 - feat(YouTube/Translations): update translation
-`Arabic`, `Bulgarian`, `Chinese Traditional`, `French`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Turkish`, `Vietnamese`
+`French`, `Greek`
 
 
 YouTube Music
 ==
-- feat(YouTube Music): add `Hide general ads` patch https://github.com/inotia00/ReVanced_Extended/issues/698
-- feat(YouTube Music/Hide general ads): integrate `Hide music ads` patch
-- feat(YouTube Music/Translations): update translation
-`French`, `Korean`, `Polish`, `Russian`, `Turkish`, `Vietnamese`
+- fix(YouTube Music/Custom branding icon YouTube Music): displays an appropriate error if the path to patch options is invalid
+- fix(YouTube Music/Custom branding icon YouTube Music): patch options not available https://github.com/inotia00/ReVanced_Extended/issues/1795
 
 
 Etc
 ==
+- this release is a hotfix. If you haven't visited this page within 24 hours, please read the changelog from [previous release](https://github.com/inotia00/revanced-patches/releases/tag/v2.203.1)
 - when updating from YouTube v18.33.40 or lower to YouTube v18.34.xx or later, a clean install is recommended.
-- Note: YouTube Music's `Hide general ads` patch does not hide all ads or promotion banners.
 
 ※ Compatible ReVanced Manager: [RVX Manager v1.17.1 (fork)](https://github.com/inotia00/revanced-manager/releases/tag/v1.17.1)
 [Crowdin translation]
