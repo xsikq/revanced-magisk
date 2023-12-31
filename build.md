@@ -1,25 +1,26 @@
 CLI: revanced-cli-4.3.0-all.jar  
-Integrations: revanced-integrations-0.130.1.apk  
-Patches: revanced-patches-2.208.1.jar  
+Integrations: revanced-integrations-0.131.1.apk  
+Patches: revanced-patches-2.209.1.jar  
 
 YouTube
 ==
+- feat(YouTube): add `Remove viewer discretion dialog` patch
+- fix(YouTube/Disable auto captions): patch does not work when A/B testing is applied
+- fix(YouTube/Hide captions button): patch does not work when A/B testing is applied https://github.com/inotia00/ReVanced_Extended/issues/1864
+- fix(YouTube/Hide filmstrip overlay, Hide seek message): patch does not work when A/B testing is applied
+- fix(YouTube/SponsorBlock): do not auto skip end segments more than once if using a slow playback speed
+- fix(YouTube/VideoInformation): Ignore video seek attempts during the last 250ms of video playback
 - feat(YouTube/Translations): update translation
-`Arabic`, `Chinese Traditional`, `French`, `Greek`, `Indonesian`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Turkish`, `Ukrainian`, `Vietnamese`
+`Arabic`, `Bulgarian`, `French`, `Greek`, `Italian`, `Japanese`, `Korean`, `Polish`, `Russian`, `Spanish`, `Turkish`, `Ukrainian`, `Vietnamese`
 
 
 YouTube Music
 ==
-- fix(YouTube Music/Hide category bar): clarify descriptions
-- fix(YouTube Music/Hide general ads): `Hide interstitial ads` breaks layout https://github.com/inotia00/ReVanced_Extended/issues/1847
-- fix(YouTube Music/Sponsorblock): changing segment behaviour in sponsorblock setting crashes the app https://github.com/inotia00/ReVanced_Extended/issues/1857
+- feat(YouTube Music): add `Remove viewer discretion dialog` patch
+- feat(YouTube Music/Hide flyout menu): add unimplemented settings https://github.com/inotia00/ReVanced_Extended/issues/1404
+- fix(YouTube Music/Disable auto captions): captions are always disabled when `Disable auto captions` is on
 - feat(YouTube Music/Translations): update translation
-`Korean`, `Russian`, `Turkish`, `Ukrainian`, `Vietnamese`
-
-
-Reddit
-==
-- fix(Reddit/Change package name): force close occurs when patch is applied from RVX Manager https://github.com/inotia00/ReVanced_Extended/issues/1848
+`Brazilian`, `Chinese Traditional`, `French`, `Korean`, `Polish`, `Russian`, `Turkish`, `Ukrainian`, `Vietnamese`
 
 
 Etc
